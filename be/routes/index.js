@@ -8,5 +8,5 @@ const RootRouter = Router();
 RootRouter.get('/teachers',teacherController.getTeachers);
 RootRouter.post('/teachers',teacherMiddleware.createTeacher,teacherController.createTeacher);
 RootRouter.get('/teacher-positions',teacherPositionController.getTeacherPosition);
-RootRouter.post('/teacher-positions',teacherPositionController.createTeacherPosition)
+RootRouter.post('/teacher-positions',teacherPositionMiddleware.createTeacherPosition,teacherPositionController.createTeacherPosition)
 export default RootRouter
